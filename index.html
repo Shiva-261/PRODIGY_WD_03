@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-panel" aria-labelledby="game-title">
+      <div class="top-bar">
+        <div>
+          <p class="eyebrow">Classic grid battle</p>
+          <h1 id="game-title">Tic-Tac-Toe</h1>
+        </div>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <span aria-hidden="true">T</span>
+        </button>
+      </div>
+
+      <div class="controls" aria-label="Game controls">
+        <div class="mode-switch" role="group" aria-label="Choose game mode">
+          <button class="mode-button active" type="button" data-mode="human">2 Players</button>
+          <button class="mode-button" type="button" data-mode="ai">Vs AI</button>
+        </div>
+        <div class="mark-switch" role="group" aria-label="Choose your mark">
+          <button class="mark-button active" type="button" data-mark="X">X</button>
+          <button class="mark-button" type="button" data-mark="O">O</button>
+        </div>
+      </div>
+
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div class="score-card">
+          <span class="score-label" id="xLabel">Player X</span>
+          <strong id="xScore">0</strong>
+        </div>
+        <div class="score-card">
+          <span class="score-label">Draws</span>
+          <strong id="drawScore">0</strong>
+        </div>
+        <div class="score-card">
+          <span class="score-label" id="oLabel">Player O</span>
+          <strong id="oScore">0</strong>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <p id="statusText" aria-live="polite">Player X starts</p>
+        <button class="ghost-button" id="resetRound" type="button">New Round</button>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board" role="grid" aria-label="Tic-tac-toe board">
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 1" data-index="0"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 2" data-index="1"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 3" data-index="2"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 4" data-index="3"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 5" data-index="4"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 6" data-index="5"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 7" data-index="6"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 8" data-index="7"></button>
+          <button class="cell" type="button" role="gridcell" aria-label="Cell 9" data-index="8"></button>
+        </div>
+      </div>
+
+      <div class="footer-actions">
+        <button class="primary-button" id="resetMatch" type="button">Reset Match</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
